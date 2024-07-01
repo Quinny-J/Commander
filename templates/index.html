@@ -1,0 +1,70 @@
+<!doctype html>
+<head>
+  <link rel="stylesheet" href="../static/styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<title>Commander --- Run a command on a this system</title>
+<div class="box-container">
+  <div class="box">
+    <div class="steamy-box">
+      <i class="fas fa-binoculars"></i>
+      <span>Commander</span> 
+    </div>
+    <br>
+    <div class="box-header">
+      <h2>Commander --- Run a command on a this system</h2>
+    </div>
+
+    <form id="steamy-form" action="/find/" method="post" class="input-group">
+      <input id="steamy-input" name="steam_id" type="text" placeholder="Please enter a COMMAND.">
+      <button type="submit" id="send-button">
+        <i class="fas fa-search"></i> 
+      </button>
+    </form>
+    <br>
+
+    <div class="displayTab">
+      <button class="displayTablinks" onclick="displayType(event, 'Response')"><i class="fa-regular fa-file-code"></i> Response</button>
+      <button class="displayTablinks" onclick="displayType(event, 'History')"><i class="fa-solid fa-highlighter"></i> History</button>
+    </div>
+
+    <div id="Response" class="displayTabcontent">
+    <div class="box-content">
+      <div class="response-box">
+        <ul id="response-data">{{ response_data }} </ul>
+      </div>
+    </div>
+    </div> 
+
+    <div id="History" class="displayTabcontent">
+      <div class="box-content">
+        <div class="response-box">
+          <ul id="response-data">Command Ran : {{ command_user }} </ul>
+      </div>
+      </div>
+      </div> 
+
+      <div id="Test" class="input-group">
+        <label id="steamy-label"><i class="fa-regular fa-file-code"></i> Made by <a href="https://github.com/quinny-j">github.com/quinny-j</a>
+      </div>
+
+  </div>
+</div>
+
+
+
+<script>
+  function displayType(evt, dispName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("displayTabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("displayTablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(dispName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  </script>
