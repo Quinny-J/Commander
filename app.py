@@ -2,15 +2,9 @@
 # Made by @Quinny-J
 # 01/07/2024
 
-# if you have it installed but get an error run the last line in term
-# pip install requests
-# python -m pip install requests
-
 # References 
 # Flask - https://flask.palletsprojects.com/en/3.0.x/
 # OS Lib - https://docs.python.org/3/library/os.html
-# Requests LIB - https://requests.readthedocs.io/en/latest/
-# Discord Webhook Lib - https://pypi.org/project/discord-webhook/#basic-webhook
 
 import os
 from flask import Flask, request, render_template
@@ -36,6 +30,8 @@ def do_index():
 
 @app.route("/find/", methods=['POST', 'GET'])
 def do_command():
-    command_user = request.form.get('steam_id')
+    command_user = request.form.get('cus_command')
     response_data = os.popen(command_user).read()
+    with open("commands_ran.txt", "a") as text_file:
+        text_file.write("\nRan Command: %s" % command_user)
     return render_template('index.html', response_data=response_data, command_user=command_user) 
