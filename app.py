@@ -33,5 +33,5 @@ def do_command():
     command_user = request.form.get('cus_command')
     response_data = os.popen(command_user).read()
     with open("commands_ran.txt", "a") as text_file:
-        text_file.write("\nRan Command: %s" % command_user)
+        text_file.write("Ran Command: %s\n" % command_user)
     return render_template('index.html', response_data=response_data, command_user=command_user) 
