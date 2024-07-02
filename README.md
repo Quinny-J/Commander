@@ -7,6 +7,8 @@ Please be aware run this in a VM or sandbox enviroment as people can execute any
 
 If you want to alter or add to this script please feel free to do so
 
+![PICTURE](https://raw.githubusercontent.com/Quinny-J/Commander/main/pic.png)
+
 # ⚡ Getting Started
 
 Install Python **[Link](https://www.python.org/downloads/)**
@@ -24,8 +26,6 @@ $ pip install requirements.txt
 $ python -m flask run
 
 ```
-
-![PICTURE](https://raw.githubusercontent.com/Quinny-J/Commander/main/pic.png)
 
 ## 📕 Reference 
 - Flask - https://flask.palletsprojects.com/en/3.0.x/
