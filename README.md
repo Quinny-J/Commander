@@ -17,7 +17,7 @@ Follow these steps
 
 ```bash
 # Goto Dir
-$ cd steamyFlask
+$ cd commander
 
 # Install Requirements
 $ pip install requirements.txt
