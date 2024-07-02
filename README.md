@@ -10,7 +10,6 @@ If you want to alter or add to this script please feel free to do so
 # ⚡ Getting Started
 
 Install Python **[Link](https://www.python.org/downloads/)**
-Get Steam API KEY **[Link](https://steamcommunity.com/dev/registerkey)**
 
 Follow these steps
 
