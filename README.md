@@ -32,7 +32,8 @@ $ python -m flask run
 - OS Lib - https://docs.python.org/3/library/os.html
 
 ## 📝 Todo (maybe)
-- Read command history from text file to display
-- Command filter/blacklist
-- Server/Client so commands can be ran on multiple rpis at once from the web ui
-- API ?
+- [x] Read command history from list
+- [-] Read command history from text file to display
+- [-] Command filter/blacklist
+- [-] Server/Client so commands can be ran on multiple rpis at once from the web ui
+- [-] API ?

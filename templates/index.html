@@ -39,7 +39,9 @@
     <div id="History" class="displayTabcontent">
       <div class="box-content">
         <div class="response-box">
-          <ul id="response-data">Command Ran : {{ command_user }} </ul>
+          {%- for i in commands_ran %}
+          <ul id="response-data">{{ i }} </ul>
+          {%- endfor %}
       </div>
       </div>
       </div> 
